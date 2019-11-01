@@ -1,0 +1,11 @@
+ <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-requirement-tab" data-toggle="tab"
+                           href="#nav-require" role="tab" aria-controls="nav-home"
+                           aria-selected="true">Requirement</a>
+                        <a class="nav-item nav-link" id="nav-design-tab" data-toggle="tab" href="#nav-design"
+                           role="tab" aria-controls="nav-profile" aria-selected="false">Exercise 1
+                        </a>
+                        <a class="nav-item nav-link" id="nav-implement-tab" data-toggle="tab" href="#nav-implement"
+                           role="tab" aria-controls="nav-contact" aria-selected="false"> Exercise 2</a>
+
+                    </div>
