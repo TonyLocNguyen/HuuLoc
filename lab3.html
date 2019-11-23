@@ -19,7 +19,7 @@
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="icon2.ico">
+ <link rel="SHORTCUT ICON" href="icon.png  ">
 
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
@@ -61,15 +61,13 @@
   
   </header>
   <section class="banner_post"  style="padding-left: 160px">
-    <div class="container">
+    <div class="tabCenter"> 
         <center><h2><strong>Lab3</strong></h2></center>
-        <button class="tablinks" onclick="openCity(event, 'Requirements')" id="defaultOpen">Requirements</button>
-      <button class="tablinks" onclick="openCity(event, 'Design')">F-Pattern</button>
-      <button class="tablinks" onclick="openCity(event, 'Implement')">Z-Pattern</button>
+        <button class="tablinks active" name="Requirement">Requirement</button>
+						<button class="tablinks" name="Ex1">F-pattern</button>
+						<button class="tablinks" name="Ex2">Z-pattern</button>
 
-
-        <div class="tab-content">
-            <div id="home" class="tab-pane active">
+            <div id="Requirement" class="tabcontent">
                 <br>
 <br>
                 <br>
@@ -87,16 +85,12 @@
             <br>
 <br>
 
-            <div id="menu1" class="tab-pane fade">
-                <ul class="nav nav-tab nav-fill" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link" id="nav-design-tab" data-toggle="tab" href="design1"
-               role="tab" aria-controls="nav-profile" aria-selected="false">Design
-            </a>
-            <a class="nav-item nav-link" id="nav-implement-tab" data-toggle="tab" href="f-pattern.html"
-               role="tab" aria-controls="nav-contact" aria-selected="false">Implement </a>
-                </ul>
-
-                <div id="design1" class="tab-pane active">
+      <div id="Ex1" class="tabcontent">
+        <div class="tabCenter">
+         <button class="tablinks1 active" name="Design1">Design</button>
+          <a href="f-pattern.html " target="_blank"><button class="tablinks1" name="Implement1">Implement</button></a>
+        </div>
+          <div id="Design1" class="tabcontent1">
 
                     <h3><center><u>Design by note</u></center></h3>
                     <center><img src="d2.jpg" width="400" height="500"/><a href="d2.jpg" download="d2.jpg"><img src="https://2.bp.blogspot.com/-JEOlqZXt74E/V5NuodbKjeI/AAAAAAAAbls/rCtpODR_NXEgGTjYzR59ZlWwlY74wnHJACLcB/s1600/123tailieufree.com.png"   width="30px" height="auto"/></a></center>
@@ -113,16 +107,11 @@
 
                 </div>
             </div>
-            <div id="Implement" class="tabcontent">
-
-                <div class="tab">
-                    <button class="tablinks active"><p>Design</p></button>
-                    <button class="tablinks" href="f-pattern.html">Implement<p>
-                        
-                    </p></button>
-                </ul>
-
-                <div id="design2" class="tab-pane active">
+            <div id="Ex2" class="tabcontent">
+              <div class="tabCenter">
+                <button class="tablinks2 active" name="Design2">Design</button>
+                <a href="zp.html " target="_blank"><button class="tablinks2" name="Implement2">Implement</button></a>              </div>
+              <div id="Design2" class="tabcontent2">
 
                     <h3><center><u>Design by note</u></center></h3>
                     <center><img src="d1.jpg" width="400" height="500"/><a href="d1.jpg" download="d1.jpg"><img src="https://2.bp.blogspot.com/-JEOlqZXt74E/V5NuodbKjeI/AAAAAAAAbls/rCtpODR_NXEgGTjYzR59ZlWwlY74wnHJACLcB/s1600/123tailieufree.com.png"   width="30px" height="auto"/></a></center>
@@ -144,72 +133,57 @@
         </div>
     </div>
     <script type="text/javascript">
-        var buttons = document.getElementsByClassName('tablinks');
-        var contents = document.getElementsByClassName('tabcontent2');
-        function showContent(id) {
-          for (var i = 0; i < contents.length; i++) {
-            contents[i].style.display = 'none';
+      var buttons2 = document.getElementsByClassName('tablinks2');
+      var contents2 = document.getElementsByClassName('tabcontent2');
+      function showContent2(id) {
+        for (var i = 0; i < contents2.length; i++) {
+          contents2[i].style.display = 'none';
+        }
+        var content2 = document.getElementById(id);
+        content2.style.display = 'block';
+      }
+      for (var i = 0; i < buttons2.length; i++) {
+        buttons2[i].addEventListener("click", function() {
+          var id = this.name;
+          for (var i = 0; i < buttons2.length; i++) {
+            buttons2[i].classList.remove("active");
           }
-          var content = document.getElementById(id);
-          content.style.display = 'block';
-        }
+          this.className += " active";
+          showContent2(id);
+        });
+      }
+      showContent2('Design2');
+    </script>
+  </div>
+
+  <script type="text/javascript">
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id) {
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none';
+      }
+      var content = document.getElementById(id);
+      content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function() {
+        var id = this.name;
         for (var i = 0; i < buttons.length; i++) {
-          buttons[i].addEventListener("click", function() {
-            var id = this.textContent;
-            for (var i = 0; i < buttons.length; i++) {
-              buttons[i].classList.remove("active");
-            }
-            this.className += " active";
-            showContent(id);
-          });
+          buttons[i].classList.remove("active");
         }
-        showContent('');
-      </script>
+        this.className += " active";
+        showContent(id);
+      });
+    }
+    showContent('Requirement');
+  </script>
 
     </body>
     </html>
   </div>
 
-  <script type="text/javascript">
-    var buttons1 = document.getElementsByClassName('tablinks1');
-    var contents1 = document.getElementsByClassName('tabcontent1');
-    function showContent1(id) {
-      for (var i = 0; i < contents1.length; i++) {
-        contents1[i].style.display = 'none';
-      }
-      var content1 = document.getElementById(id);
-      content1.style.display = 'block';
-    }
-    for (var i = 0; i < buttons1.length; i++) {
-      buttons1[i].addEventListener("click", function() {
-        var id = this.textContent;
-        for (var i = 0; i < buttons1.length; i++) {
-          buttons1[i].classList.remove("active");
-        }
-        this.className += " active";
-        showContent1(id);
-      });
-    }
-    showContent1('');
-  </script>
-</div>
-<script>
-function openCity(evt, cityName) {
-var i, tabcontent, tablinks;
-tabcontent = document.getElementsByClassName("tabcontent");
-for (i = 0; i < tabcontent.length; i++) {
-  tabcontent[i].style.display = "none";
-}
-tablinks = document.getElementsByClassName("tablinks");
-for (i = 0; i < tablinks.length; i++) {
-  tablinks[i].className = tablinks[i].className.replace(" active", "");
-}
-document.getElementById(cityName).style.display = "block";
-evt.currentTarget.className += " active";
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+  
         
         </div>
       </div>
