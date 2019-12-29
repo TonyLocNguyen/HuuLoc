@@ -9,6 +9,8 @@
   <meta name="author" content="">
 
   <title>Nguyễn Hữu Lộc</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +21,8 @@
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-  <link rel="SHORTCUT ICON" href="icon.png  ">
+ <link rel="SHORTCUT ICON" href="icon.png  ">
+
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
 
@@ -34,10 +37,10 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ml-auto">
-          <li class="nav-item">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="Exercise.html">Lab1</a>
           </li>
           <li class="nav-item">
@@ -52,17 +55,88 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Lab5</a>
           </li>
-        </ul>
-      </div>
+      </ul>
+    </div>
     </div>
   </nav>
-  <section class="banner_post" style="padding-left: 160px">
-        <div class="container">
-            <h2><strong>Lab2</strong></h2>
-            <div class="tab">
-    <
- <!-- Footer -->
- <footer class="footer">
+</div>
+  
+  </header>
+  <section class="banner_post" style="padding-left: 100px">
+      <div class="container">
+        <h3><strong>Result</strong></h3>
+        <button class="tablinks active buttonblack" name="Requirement">Requirement</button>
+        <button class="tablinks buttonblack" name="Implement">Implement</button>
+            <div id="Requirement" class="tabcontent">
+                <br>
+                <h4> Yêu Cầu </h4>
+                <p >
+                    <p>Tạo một trang Result trên đó liệt kê những gì mình đã làm/học được trong suốt quá trình làm bài tập nhóm. 
+                      Dẫn link tới từng trang do mình đã làm.</p>
+                        <p>Tự đánh giá mình được bao nhiêu % trong tổng công việc của bài tập nhóm.</p>
+                        </p>
+            </div>
+            <br>
+            <br>
+<br>
+
+ <br id="Implement" class="tabcontent">
+    <h4> Web Nhóm </h4>
+    <a href="https://hci2019group02.tk/styleguide.html"  target="blank">1.Style Guide</a>  
+    <h4> Web TNL-Shoes </h4>
+    <a href="http://www.tnlshoes.tk/register.html"  target="blank">2.Đăng Kí</a></br>  
+    <a href="http://www.tnlshoes.tk/login.html"  target="blank">3.Đăng nhập</a>  </br>  
+    <a href="http://www.tnlshoes.tk/forgotpass.html"  target="blank">4.Quên mật khẩu</a>  </br>  
+    <a href="http://www.tnlshoes.tk/about.html"  target="blank">5.Cửa Hàng</a>  </br>  
+
+   </div>
+
+  <script type="text/javascript">
+    var buttons = document.getElementsByClassName('tablinks');
+    var contents = document.getElementsByClassName('tabcontent');
+    function showContent(id) {
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none';
+      }
+      var content = document.getElementById(id);
+      content.style.display = 'block';
+    }
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function() {
+        var id = this.name;
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove("active");
+        }
+        this.className += " active";
+        showContent(id);
+      });
+    }
+    showContent('Requirement');
+  </script>
+
+    </body>
+    </html>
+  </div>
+
+  
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  </section>
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-4">
@@ -101,19 +175,11 @@
     </div>
   </div>
 </footer>
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+</section>
 
-  <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js"></script>
+ 
+  
 
 </body>
 
